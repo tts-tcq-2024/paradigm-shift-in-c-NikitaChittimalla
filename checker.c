@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <assert.h>
  
-int is_temperature_ok(float temperaure) {
+int is_temperature_ok(float temperature) {
     return (temperature >= 0 && temperature <= 45);
 }
  
@@ -27,13 +27,13 @@ int is_battery_ok(float temperature, float soc, float chargeRate) {
  
 int main() {
     //test case 1
-    if (is_battery_ok(40,30,0.2)) {
+    if (is_battery_ok(25,70,0.7)) {
         printf("Battery status: OK\n");
     } else {
         printf("Battery status: NOT OK - Please check the parameters\n");
     }
     //test case 2
-    if (is_battery_ok(95,10,0.9)) {
+    if (is_battery_ok(50,85,0)) {
         printf("Battery status: OK\n");
     } else {
         printf("Battery status: NOT OK - Please check the parameters\n");
